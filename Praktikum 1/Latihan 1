@@ -1,0 +1,14 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Sep 20 14:47:49 2021
+
+@NIM: 065002100005
+@author: Nia Suhernawati
+"""
+
+x = input("siapa namamu")
+print("nama saya", x)
+d = input("dimana kamu tinggal")
+print("saya tinggal di ", d)
+z = input("dimana asal sekolah kamu")
+print("asal sekolah saya ", z)
