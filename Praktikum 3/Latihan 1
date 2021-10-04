@@ -1,0 +1,28 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Oct  4 13:47:06 2021
+
+@Judul : Praktikum 3 Algoritma
+@Materi : Struktur Kendali
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211004
+"""
+
+print("jenis segitiga berdasarkan panjang sisi")
+sa=int(input("Masukkan sisi a: "))
+sb=int(input("Masukkan sisi b: "))
+sc=int(input("Masukkan sisi c: "))
+
+
+if(sa==sb==sc):
+    print("merupakan segitiga sama sisi")
+elif(sa==sb or sb==sc or sc==sa):
+    print("merupakan segitiga sama kaki")
+else:
+    if((sa+sb <= sc) or (sa+sc <= sb) or (sb+sc <= sa)):
+        print("bukan merupakan segitiga")
+    else:
+        print("merupakan segitiga sembarang")
