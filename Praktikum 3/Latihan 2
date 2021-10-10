@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 3 Algoritma
+@Materi : Struktur Kendali
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211004
+
+"""
+
+print("mencari akar persamaan kuadrat dan determinan")
+a=int(input("insert value A: "))
+b=int(input("insert value B: "))
+c=int(input("insert value C: "))
+
+from math import sqrt
+
+#rumus
+d = b * b - (4 * a * c)
+
+if (a==0):
+    print("bukan merupakan persamaan kuadrat")
+
+elif (d>0):
+    X1 = (-b+sqrt(d)) / (2*a)
+    X2 = (-b-sqrt(d)) / (2*a)
+    print("persamaan kuadrat", a, "x^2 +", b,"x +", c)
+    print("determinan: ", d)
+    print("merupakan akar berbeda")
+    print("akar X1 = ", X1)
+    print("akar X2 = ", X2)
+
+elif (d<0):
+    print("persamaan kuadrat", a, "x^2 +", b,"x +", c)
+    print("determinan: ", d)
+    print("merupakan akar imajiner")
+    print("akar X1= -", b, "+ akar", d, "/2*", a)
+    print("akar X2= -", b, "- akar", d, "/2*", a)
+    
+elif (d==0):
+    R = X1=X2=(-b+sqrt(d))/(2*a)
+    print("persamaan kuadrat", a, "x^2 +", b,"x +", c)
+    print("determinan: ", d)
+    print("merupakan akar kembar")
+    print("akar = ", R)
