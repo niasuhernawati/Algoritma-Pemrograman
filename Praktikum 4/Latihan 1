@@ -1,0 +1,19 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 4 Algoritma
+@Materi : Struktur Kendali II
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211011
+"""
+
+a = int(input("insert number : "))
+for i in range (0, a):
+    for j in range (0, a):
+        print(a, end= " ")
+    
+    a-=1
+    print(" ")
