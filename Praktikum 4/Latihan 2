@@ -1,0 +1,39 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 4 Algoritma
+@Materi : Struktur Kendali II
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211011
+"""
+
+a=True
+print("hi everyone!!")
+print("I want to determine the number of days in a month")
+print("insert -1 to end the program")
+
+while a==True:
+    m=int(input("insert month [1-12]: "))
+    if m>12 or m<=-2 or m==0:
+        print("invalid value entered: ", m, "*")
+    elif m==1 or m==3 or m==5 or m==7 or m==8 or m==10 or m==12:
+        print("this month has 31 days")
+        print("insert -1 to end the program")
+    elif m==4 or m==6 or m==9 or m==11:
+        print("this month has 30 days")
+        print("insert -1 to end the program")
+    elif m==2:
+        y=int(input("insert year: "))
+        if(y%4==0 and m==2):
+            print("this month has 29 days")
+            print("insert -1 to end the program")
+        else:
+            print("this month has 28 days")
+            print("insert -1 to end the program")
+    elif m==-1:
+        a=False
+        print("program ends")
+        print("thank you for using the program")
