@@ -1,0 +1,59 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 5 Algoritma
+@Materi : Struktur Kendali
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211018
+"""
+
+p = '0'
+total = 0
+x = 0
+
+while (p != "") :
+    p = str(input("masukkan point :"))
+    x = x + 1
+    if (p == ''):
+        break ;
+    elif (p=="A"):
+        print("point = 4.00")
+        total += 4.00
+    elif (p=="A-"):
+        print("point = 3.75")
+        total += 3.75
+    elif (p=="B+"):
+        print("point = 3.50")
+        total += 3.50
+    elif (p=="B"):
+        print("point = 3.00")
+        total += 3.00
+    elif (p=="B-"):
+        print("point = 2.75")
+        total += 2.75
+    elif (p=="C+"):
+        print("point = 2.50")
+        total += 2.50
+    elif (p=="C"):
+        print("point = 2.00")
+        total += 2.00
+    elif (p=="C-"):
+        print("point = 1.75")
+        total += 1.75
+    elif (p=="D"):
+        print("point = 1.50")
+        total += 1.50
+    elif (p=="E"):
+        print("point = 1.25")
+        total += 1.25
+    else :
+        x= x-1
+        print ("masukkan point yang benar")
+if (x==1):
+        print ("rataratanya 0")
+else :
+        ratarata  = total/(x-1)
+        print ("nilai ratarata adalah :", ratarata)
