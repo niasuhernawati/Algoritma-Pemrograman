@@ -1,0 +1,51 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 5 Algoritma
+@Materi : Struktur Kendali
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211018
+"""
+
+print("hi everyone!!")
+print("calculate Zoo entry tickets by age")
+a='0'
+t=0
+x=0
+
+while a!="" :
+    a = int(input("insert age: "))
+    x+=1
+    if a==-1:
+        break ;
+    elif 0 <= a <= 2:
+        t+=0.0
+        print("free ticket")
+        print("total=",t)
+        print("insert -1 to pay and change")
+    elif 3 <= a <= 12:
+        t+=14.0
+        print("ticket price $14")
+        print("total=$",t)
+        print("insert -1 to pay and change")
+    elif a >= 65:
+        t+=18.0
+        print("ticket price $18.0")
+        print("total=$",t)
+        print("insert -1 to pay and change")
+    else :
+        t+=23.0
+        print("ticket price $23.0")
+        print("total=$",t)
+        print("insert -1 to pay and change")
+        
+print("total ticket price: $",t)
+p = int(input("insert money: "))
+if p < t:
+    print("sorry your money not enough")
+else:
+    print("money change: $",p-t)
+    print("thank you and happy holiday:)")
