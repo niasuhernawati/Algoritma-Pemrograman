@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 8 Algoritma
+@Materi : Latihan Fungsi
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211108
+"""
+
+print("hi everyone!!")
+print("the program will determine ordinal number")
+print("insert 0 to end the program")
+
+F = False
+number = ""
+
+def first(number):
+    if number%10 == 1:
+        print(number, "'st'")
+    else:
+        second(number)
+   
+def second(number):
+    if number%10 == 2:
+        print(number,"'nd'")
+    else:
+        third(number)
+    
+def third(number):
+    if number%10 == 3:
+        print(number,"'rd'")
+    else :
+        fourth(number)
+    
+def fourth (number):
+    if number%10 >= 4 or number%10 == 0 or number in [11,12,13]:
+        print(number,"'th'")
+    else :
+        if number%10 == 1:
+            first(number) 
+        elif number%10 == 2:  
+            second(number)
+        elif number%10 == 3:
+            third(number)
+    
+while (not F):
+    number = int(input("insert number: "))
+    if number == 0:
+        F = True
+        print("'0 th'")
+    else:
+        fourth(number)
+
+print("program ends")
+print("thank you for using the program")
