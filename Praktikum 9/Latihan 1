@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 9 Algoritma
+@Materi : Fungsi Rekursif
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211115
+"""
+
+print("hi everyone!!")
+print("program akan menampilkan penjumlahan berurut")
+
+def rekursif(number=0, j=0, k=1):
+    if j <= 0:
+        return 0
+    else:
+        number = int(input("masukkan angka ke-" + str(k) + ":"))
+        if j == 1:
+            return number
+        else:
+            k+=1
+            return number + rekursif(number, j-1, k)
+        
+total = int(input("masukkan jumlah angka: "))
+value = rekursif(j=total)
+print("hasil penjumlahan adalah: " + str(value))
