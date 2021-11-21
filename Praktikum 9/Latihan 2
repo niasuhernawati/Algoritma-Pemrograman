@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 9 Algoritma
+@Materi : Fungsi Rekursif
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211115
+"""
+
+print("hi everyone!!")
+print("program akan menampilkan perhitungan perpangkatan")
+
+def pow(bil, pangkat):
+    if bil==1:
+        return 1 
+    elif bil==0:
+        return 0
+    else :
+        if pangkat==1:
+            return bil 
+        elif pangkat==0:
+            return 1
+        elif pangkat>1:
+            return bil*pow(bil, pangkat-1)
+        elif pangkat<0 :
+            return 1/bil* pow(bil, pangkat-1)
+        else :
+            print("invalid")
+            
+def hasil(a=0, b=0):
+    a=int(input("insert bilangan: "))
+    b=int(input("insert pangkat: "))
+    r = pow(a, b)
+    print("hasil dari ",a,"**",b,"adalah :", r)
+
+hasil()
+print("thank you for using the program")
