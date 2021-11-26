@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-
+"""
+
+@Judul : Praktikum 10 Algoritma
+@Materi : File Handling
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Jumat/20211126
+"""
+
+print("hi everyone!!")
+print("program akan menampilkan file biodata")
+
+def write(doc):
+    file = open("Biodata.txt", "w")
+    file.write(doc)
+    file.close()
+
+def read():
+    file = open("Biodata.txt", "r")
+    data = file.read()
+    print(data)
+    file.close()
+
+n = input("Masukkan Nama : ")
+u = input("Masukkan Umur : ")
+a = input("Masukkan Alamat : ")
+e = input("Masukkan Email : ")
+d = input("Masukkan Dosen Wali : ")
+doc = "Nama: {}\nUmur: {}\nAlamat: {}\nEmail: {}\nDosen Wali: {}".format(n,u,a,e,d)
+
+print("\nBerikut ini Data Kamu")
+write(doc)
+read()
