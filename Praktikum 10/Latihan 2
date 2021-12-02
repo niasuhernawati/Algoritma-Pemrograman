@@ -1,0 +1,76 @@
+# -*- coding: utf-8 -*-
+"""
+@Judul : Praktikum 10 Algoritma
+@Materi : File Handling
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Jumat/20211126
+"""
+def write(text):
+    file = open (namafile+".txt","w")
+    file.write(text)
+    file.close()
+
+def read():
+    file = open(namafile+'.txt', 'r')
+    data = file.read()
+    print(data)
+    file.close()
+    
+    
+def append(text):
+    file = open (namafile+".txt","a")
+    file.write(text)
+    file.close()
+
+a = False 
+
+while (not a ):
+    try:
+        print("==== Program File Handling ====")
+        print("1. Membuat dan Menulis File")
+        print("2. Membaca File")        
+        print("3. Menambahkan Teks pada File")
+        print("4. Keluar dari Program")
+        print("")
+        
+        digit = int(input("Masukkan pilihan angka (1/2/3/4): "))
+        if digit==1:
+            namafile = input("Masukkan Nama File: ")
+            nama = input("Masukkan Nama: ")
+            NIM = input("Masukkan NIM: ")
+            tahunakt = input("Masukkan Tahun Angkatan: ")
+            ket = "\nNama: {}\nNIM: {}\nAngkatan: {}".format(nama, NIM, tahunakt)
+           
+            write(ket)
+            print("\nFile berhasil dibuat\n")
+        
+        elif digit== 2:
+            namafile = input("Masukkan Nama File: ")
+            
+            read()
+            print("\n")
+            
+        elif digit==3:
+            namafile = input("Masukkan Nama File: ")
+            fren = input("Masukkan Nama Sahabatmu: ")
+            cat =input("Masukkan Catatan Tambahan Kamu: ")
+            ket = "\nNama Sahabat: {}\nCatatan: {}".format(fren, cat)
+            
+            append(ket)
+            print("\nFile berhasil ditambahkan\n")
+        
+        elif digit==4:
+            b = True
+            print("Thank you for using the program")
+            
+        else:
+            print("Masukkan pilihan dengan benar\n")
+            
+    except ValueError:
+        print("Masukkan data kembali")
+        
+    except FileNotFoundError:
+        print("File", namafile, "tidak dapat ditemukan\n")
