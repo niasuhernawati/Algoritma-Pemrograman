@@ -1,0 +1,31 @@
+# -*- coding: utf-8 -*-
+"""
+@Judul : Praktikum 11 Algoritma
+@Materi : Search, List & Sorting
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211129
+"""
+
+print("Hi Everyone!!")
+print("Program akan menampilkan fungsi sorting bubble sort dengan rekursif")
+
+def exchange(listnum, s, t):
+    temp = listnum[s]
+    listnum[s] = listnum[t]
+    listnum[t] = temp
+
+def bubblesort(listnum, k):
+    for j in range(k-1):
+        if listnum[j] > listnum[j+1]:
+            exchange(listnum, j, j+1)
+    if k-1 > 1:
+        bubblesort(listnum, k-1)
+
+print("List sebelum disorting: [20, 50, 70, 90, 10, 30, 40, 100, 80, 60]")
+Listnum = [20, 50, 70, 90, 10, 30, 40, 100, 80, 60]
+bubblesort(Listnum, len(Listnum))
+print("List sesudah disorting: ", Listnum)
+print("Thank you for using the program")
