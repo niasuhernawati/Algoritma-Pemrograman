@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+"""
+@Judul : Praktikum 12 Algoritma
+@Materi : Object Oriented Programming
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211206
+"""
+print("Hi Everyone!!")
+print("Program akan menampilkan biodata mahasiswa")
+
+class Mahasiswa:
+    siswaCount = 0
+    
+    def __init__(self, Nama, NIM, Akt):
+        self.Nama = Nama
+        self.NIM = NIM
+        self.Akt = Akt
+        Mahasiswa.siswaCount += 1
+    
+    def printbio(self):
+        print("\nNama: " + self.Nama + "\nNIM: " + str(self.NIM) + "\nTahun Angkatan: " + str(self.Akt))
+
+Nama = input("Masukkan Nama: ")
+NIM = str(input("Masukkan NIM: "))
+Akt = str(input("Masukkan Tahun Angkatan: "))
+
+data=Mahasiswa(Nama, NIM, Akt)
+data.printbio()
+print("Total Mahasiswa:", Mahasiswa.siswaCount)
