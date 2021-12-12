@@ -1,0 +1,67 @@
+# -*- coding: utf-8 -*-
+"""
+@Judul : Praktikum 12 Algoritma
+@Materi : Object Oriented Programming
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Senin/20211206
+"""
+print("Hi Everyone!!")
+
+class PBO:
+    def __init__(self, Nama, Nilai):
+        self.nama = Nama
+        self.nilai = Nilai
+        
+    def biodata(self):
+        print("Nama: ", self.nama, "\nNilai: ", str(self.nilai))
+
+X = False 
+while not X :
+    try:
+        print("===== Program OOP =====")
+        print("1. Mendeklarasikan Objek")
+        print("2. Menampilkan Objek")        
+        print("3. Merubah Nilai Objek")
+        print("4. Menghapus Objek")
+        print("5. Keluar dari Program")
+        
+        digit = int(input("Masukkan pilihan angka (1/2/3/4/5): "))
+        if digit == 1:
+            Nama = input("Masukkan Nama: ")
+            Nilai = input("Masukkan Nilai: ")
+            Tampil = PBO(Nama, Nilai)
+            print("Data berhasil ditambahkan\n")
+            
+        elif digit == 2:
+            Tampil = PBO(Nama, Nilai)
+            Tampil.biodata()
+            print("")
+            
+        elif digit == 3:
+            pil = input("Apa yang ingin diubah (Nama/Nilai): ")
+            if pil == "Nama" :
+                Nama = input("Masukkan Nama: ")
+                print("Data nama berhasil diubah\n")
+            elif pil == "Nilai" :
+                Nilai = input("Masukkan Nilai: ")
+                print("Data nilai berhasil diubah\n")
+            else:
+                print("\nMasukkan pilihan yang benar!")
+                
+        elif digit == 4:
+            Nama = "None"
+            Nilai = "None"
+            print("Data berhasil dihapus\n")
+            
+        elif digit == 5:
+            X = True 
+            print("Thank you for using the program")
+            
+        else:
+            print ("\nMasukkan pilihan yang benar!")
+
+    except ValueError:
+        print("\nMasukkan pilihan yang benar!")
