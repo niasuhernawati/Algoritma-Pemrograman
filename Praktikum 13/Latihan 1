@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+"""
+@Judul : Praktikum 13 Algoritma
+@Materi : Pengantar Data Science
+@Author: Nia Suhernawati
+@NIM : 065002100005
+@Mata Kuliah : Algoritma dan Pemrograman
+@Program Studi : Sistem Informasi
+@Hari/tanggal : Jumat/20211217
+"""
+
+import pandas as pd
+
+df = pd.read_csv("Negara.csv")
+
+mean = df.groupby(["Benua"]).mean()
+std = df.groupby(["Benua"]).std()
+
+print("Berikut Data Framenya: ")
+print(df)
+print("")
+print("Berikut Data Mean: ")
+print(mean)
+print("")
+print("Berikut Data Standard Deviation: ")
+print(std)
+print("")
